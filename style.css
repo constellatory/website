@@ -1,11 +1,37 @@
+@media only screen and (max-width: 550px) {
+    main {
+        flex-direction: column-reverse !important;
+    }
+}
+
+html {
+    min-height: 100%;
+    background: radial-gradient(at center center, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1.0) 90%), url("/assets/banner.png") no-repeat fixed center;
+    background-repeat: no-repeat, repeat, repeat;
+}
+
 body {
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     background-color: black;
     color: white;
-    font-family: sans-serif;
+    gap: 4px;
+    max-width: 850px;
+    background-color: #000000BB;
+    box-shadow: 0px 0px 50px black;
+    padding: 0 30px;
+
+    a {
+        color: lightblue;
+        text-shadow: 2px 2px 3px gray;
+    }
+
+    a:hover {
+        color: lightblue;
+        text-shadow: 2px 2px 5px white;
+    }
 }
 
 header {
@@ -14,58 +40,97 @@ header {
     justify-content: center;
     align-items: center;
     max-width: 1200px;
-    height: 40vw;
-    max-height: 200px;
     overflow: hidden;
-    margin: -8px;
 }
 
 .logo img {
     width: 100%;
-    max-width: 500px;
-    filter: drop-shadow(0px 0px 20px #00000020);
-}
-
-.logo {
-    z-index: 1;
-    padding: 20px;
-}
-
-.background {
-    width: 100%;
-    max-width: 1200px;
-    height: 40vw;
-    max-height: 200px;
-    position: absolute;
-    background: radial-gradient(at center top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1.0) 70%), url("/assets/banner.png") center;
-    overflow: hidden;
+    max-width: 450px;
+    padding-top: 30px;
 }
 
 main {
-    max-width: 600px;
+    width: 100%;
+    gap: 30px;
     display: flex;
-    flex-flow: column;
     align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
-main img {
-    padding: 10px;
-    width: 90%;
+section {
+    height: 100%;
+    width: 100%;
+}
+
+:is(li)::marker {
+    content: "\279C";
+}
+
+section ul li p {
+    margin: 10px 12px;
+}
+
+section img {
+    width: 100%;
+}
+
+.section-left {
+    h1 {
+        font-size: large;
+        padding: 0;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: medium;
+    }
+}
+
+.section-right {
+    h1 {
+        font-size: large;
+        padding: 0;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: medium;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+
+        padding: 0;
+        margin: 0;
+    }
 }
 
 footer {
-    max-width: 500px;
     display: flex;
     flex-flow: column;
     align-items: center;
     padding: 5px;
+    margin-bottom: 10px;
     font-size: smaller;
 }
 
-footer .buttons {
+.buttons {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     gap: 20px;
+}
+
+marquee {
+    max-width: 600px;
+}
+
+.rainbow {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 3px grey;
 }
